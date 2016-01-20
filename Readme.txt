@@ -340,8 +340,7 @@ many hours beta-testing packMP3 and several other of my compression
 programs. He's the one to thank for my software running smoothly and not 
 causing you any trouble. 
 
-The official homepage of packJPG, packMP3, packPNM, packARI and packARC 
-is currently maintained by HTW Aalen University staff.
+The official developer blog for packJPG is hosted by encode.ru.
 
 packARC uses UPX compression for smaller executable sizes. UPX is freely 
 available from http://upx.sourceforge.net/. 
