@@ -1,0 +1,4 @@
+app      ICON    app_icon.ico
+ICONS1   ICON    app_icon_old.ico
+ICONS2   ICON    file_icon.ico
+ICONS3   ICON    sfx_icon.ico

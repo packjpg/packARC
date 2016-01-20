@@ -1,0 +1,14 @@
+app      ICON    app_icon.ico
+ICONS1   ICON    app_icon_alt.ico
+ICONS2   ICON    app_icon_red.ico
+ICONS3   ICON    app_icon_green.ico
+ICONS4   ICON    app_icon_gray.ico
+ICONS5   ICON    app_icon_blue.ico
+ICONS6   ICON    file_icon_red.ico
+ICONS7   ICON    file_icon_green.ico
+ICONS8   ICON    file_icon_gray.ico
+ICONS9   ICON    file_icon_blue.ico
+ICONS10  ICON    sfx_icon_red.ico
+ICONS11  ICON    sfx_icon_green.ico
+ICONS12  ICON    sfx_icon_gray.ico
+ICONS13  ICON    sfx_icon_blue.ico

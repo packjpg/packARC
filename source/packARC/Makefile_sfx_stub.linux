@@ -1,0 +1,21 @@
+# Project: packARC SFX stub
+# Makefile created by Matthias Stirner 01/30/2012
+# Working with GCC 4.6.0
+
+CC      = gcc
+CPP     = g++
+RM      = rm
+CFLAGS  = -Os -DSFX_STUB -Wall -pedantic -ffast-math -fsched-spec-load -fomit-frame-pointer
+LDFLAGS = -s -static-libgcc
+DEPS    = pja_archiver.h helpers.h packANYlib.h packANYlib_small.a
+OBJ     = pja_archiver.o helpers.o frontend.o packANYlib_small.a
+BIN     = sfxstub
+
+%.o: %.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+
+$(BIN): $(OBJ) $(RES)
+	$(CPP) -o $@ $^ $(LDFLAGS)
+
+clean:
+	$(RM) *.o	

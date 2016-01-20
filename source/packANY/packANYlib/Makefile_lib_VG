@@ -1,0 +1,55 @@
+# Project: packANY (JPG/MP3/ARI) static library
+# Makefile created by Matthias Stirner 01/30/2012
+# Working with GCC 4.6.0
+
+CC      = gcc
+CPP     = g++
+AR      = ar
+RM      = rm
+CFLAGS  = -DBUILD_LIB -O1 -g
+LDFLAGS = -fvisibility=hidden -static-libgcc
+DEPS    = ..//packARI//aricoder.h ..//packARI//bitops.h ..//packARI//paritbl.h ..//packJPG//pjpgtbl.h ..//packJPG//dct8x8.h ..//packMP3//pmp3tbl.h ..//packMP3//pmp3bitlen.h ..//packMP3//huffmp3.h ..//packMP3//huffmp3tbl.h ..//packPNM//ppnmtbl.h ..//packPNM//ppnmbitlen.h
+OBJ     = aricoder.o bitops.o packari.o packjpg.o packmp3.o huffmp3.o packpnm.o
+BIN     = packANYlib.a
+
+
+$(BIN): $(OBJ)
+	ar r $(BIN) $(OBJ)
+	ranlib $(BIN)
+	
+# Universal I/O, statistical model and arithmetic coding sources
+
+aricoder.o: ..//packARI//aricoder.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+bitops.o: ..//packARI//bitops.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+# packARI specific sources
+
+packari.o: ..//packARI//packari.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+# packJPG specific sources
+
+packjpg.o: ..//packJPG//packjpg.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+# packMP3 specific sources
+
+packmp3.o: ..//packMP3//packmp3.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+huffmp3.o: ..//packMP3//huffmp3.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+# packPNM specific sources
+
+packpnm.o: ..//packPNM//packpnm.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+	
+
+# clean instructions
+
+clean:
+	$(RM) *.o

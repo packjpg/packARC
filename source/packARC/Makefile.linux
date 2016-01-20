@@ -1,0 +1,21 @@
+# Project: packARC
+# Makefile created by Matthias Stirner 01/30/2012
+# Working with GCC 4.6.0
+
+CC      = gcc
+CPP     = g++
+RM      = rm
+CFLAGS  = -I. -O3 -Wall -pedantic -funroll-loops -ffast-math -fsched-spec-load -fomit-frame-pointer
+LDFLAGS = -s -static-libgcc
+DEPS    = pja_archiver.h sfxstub.h helpers.h packANYlib.h packANYlib.a
+OBJ     = pja_archiver.o helpers.o frontend.o packANYlib.a
+BIN     = packARC
+
+%.o: %.cpp $(DEPS)
+	$(CPP) -c -o $@ $< $(CFLAGS)
+
+$(BIN): $(OBJ) $(RES)
+	$(CPP) -o $@ $^ $(LDFLAGS)
+
+clean:
+	$(RM) *.o	
