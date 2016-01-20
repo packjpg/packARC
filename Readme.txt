@@ -43,7 +43,7 @@ special permissions will only be given where necessary on a case by case
 basis. This offer is aimed mainly at closed source freeware developers 
 seeking to add packARC support to their software projects. 
 
-Copyright 2006...2014 by HTW Aalen University and Matthias Stirner.
+Copyright 2006...2016 by HTW Aalen University and Matthias Stirner.
 
 
 Compression algorithms and file types
@@ -356,11 +356,11 @@ Matthias Stirner's official homepage:
  http://www.matthias.stirner.com
  
 The official home of packARC and packJPG:
- http://www.elektronik.htw-aalen.de/packjpg/
+ http://packjpg.encode.ru
  
 For questions and bug reports:
- packjpg (at) htw-aalen.de
+ packjpg (at) matthiasstirner.com
 
 
 ____________________________________
-packARC by Matthias Stirner, 12/2014
+packMP3 by Matthias Stirner, 01/2016
